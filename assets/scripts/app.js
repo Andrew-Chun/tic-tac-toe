@@ -10,4 +10,5 @@ $(() => {
   $('#changePassword').on('submit', authEvents.onChangePassword)
 
   $('#new-game').on('click', gameEvents.onNewGame)
+  $('#1').on('click', gameEvents)
 })

@@ -9,6 +9,8 @@ const onNewGame = function (event) {
     .catch(ui.newGameFailure)
 }
 
+const choice =
+
 module.exports = {
   onNewGame
 }

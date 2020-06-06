@@ -1,9 +1,32 @@
 @import '~bootstrap/scss/bootstrap';
 
+$alt-color: $cyan;
+$body-bg-color: $gray-200;
+$font-color: $light;
+
+* {
+  text-align: center;
+}
+
 .success {
   color: green;
 }
 
 .failure {
   color: red;
+}
+
+body {
+  background-color: $body-bg-color;
+}
+
+.box {
+  align-items: center;
+  background-color: $secondary;
+  border: 1px solid $white;
+  color: $font-color;
+  display: flex;
+  flex: 100%;
+  height: 300px;
+  justify-content: center;
 }
