@@ -13,10 +13,13 @@ const onValidMove = function (event) {
   console.log('clicked!')
   console.log(event.target)
   console.log(event.target.innerHTML)
+  console.log(event.target.text)
+  console.log(event.target.data)
   event.preventDefault()
 
   if (event.target.innerHTML.length === 0) {
-    console.log('No value present')
+    console.log('No value present or Valid Move!')
+    // api.updateGame()
   } else {
     console.log('Invalid move!')
   }

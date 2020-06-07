@@ -12,6 +12,13 @@ const newGame = function () {
   })
 }
 
+// const updateGame = function (event) {
+//   return $.ajax({
+//     method: 'PATCH',
+//     url: config.apiUrl + '/games'
+//   })
+// }
+
 module.exports = {
   newGame
 }
