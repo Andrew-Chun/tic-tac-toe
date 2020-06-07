@@ -7,10 +7,6 @@ const newGameSuccess = function (responseData) {
   console.log(store)
 }
 
-const newGameFailure = function () {
-  console.log('New game failed to load...')
-}
-
 const updateGameSuccess = function (responseData) {
   console.log('Valid move!')
   console.log(responseData)
@@ -19,14 +15,7 @@ const updateGameSuccess = function (responseData) {
   console.log(store)
 }
 
-const updateGameFailure = function () {
-  // $('')
-  console.log('Invalid move!')
-}
-
 module.exports = {
   newGameSuccess,
-  newGameFailure,
-  updateGameSuccess,
-  updateGameFailure
+  updateGameSuccess
 }

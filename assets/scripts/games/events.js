@@ -7,7 +7,7 @@ const onNewGame = function (event) {
 
   api.newGame()
     .then(ui.newGameSuccess)
-    .catch(ui.newGameFailure)
+    .catch()
 }
 
 const onValidMove = function (event) {
@@ -18,12 +18,16 @@ const onValidMove = function (event) {
   if (event.target.innerHTML.length === 0) {
     api.updateGame()
       .then(ui.updateGameSuccess)
-      .catch(ui.updateGameFailure)
+      .catch()
+  } else {
+    $('#game-message').text('Invalid move!').removeClass().addClass('failure')
   }
 
   if (store.currentPlayer === 'x') {
+    $('#game-message').text("Player X's turn.")
     store.currentPlayer = 'o'
   } else {
+    $('#game-message').text("Player O's turn.")
     store.currentPlayer = 'x'
   }
 }
