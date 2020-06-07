@@ -20,6 +20,7 @@ const updateGameSuccess = function (responseData) {
 }
 
 const updateGameFailure = function () {
+  // $('')
   console.log('Invalid move!')
 }
 
