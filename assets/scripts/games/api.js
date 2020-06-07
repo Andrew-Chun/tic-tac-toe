@@ -12,11 +12,11 @@ const newGame = function () {
   })
 }
 
-const updateGame = function () {
+const updateGame = function (data) {
   console.log(store)
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/games/:' + store.game._id,
+    url: config.apiUrl + '/games/' + store.game._id,
     headers: {
       Authorization: 'Token token=' + store.user.token
     },

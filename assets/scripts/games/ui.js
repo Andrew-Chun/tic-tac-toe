@@ -12,14 +12,16 @@ const newGameFailure = function () {
 }
 
 const updateGameSuccess = function (responseData) {
-  console.log(responseData)
   console.log('Valid move!')
+  console.log(responseData)
+  store.game = responseData.game
   // $('')
   if (store.currentPlayer === 'x') {
     store.currentPlayer = 'o'
   } else {
     store.currentPlayer = 'x'
   }
+  console.log(store)
 }
 
 const updateGameFailure = function () {
