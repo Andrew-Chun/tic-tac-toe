@@ -9,8 +9,13 @@ const onNewGame = function (event) {
     .catch(ui.newGameFailure)
 }
 
-const choice =
+const validMove = function (event) {
+  console.log('clicked!')
+  console.log(event.target)
+  event.preventDefault()
+}
 
 module.exports = {
-  onNewGame
+  onNewGame,
+  validMove
 }
