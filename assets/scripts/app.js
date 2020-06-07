@@ -11,6 +11,7 @@ $(() => {
 
   $('.container').hide()
   $('#new-game').on('click', gameEvents.onNewGame)
+  $('#0').on('click', gameEvents.validMove)
   $('#1').on('click', gameEvents.validMove)
   $('#2').on('click', gameEvents.validMove)
   $('#3').on('click', gameEvents.validMove)
@@ -19,5 +20,4 @@ $(() => {
   $('#6').on('click', gameEvents.validMove)
   $('#7').on('click', gameEvents.validMove)
   $('#8').on('click', gameEvents.validMove)
-  $('#9').on('click', gameEvents.validMove)
 })
