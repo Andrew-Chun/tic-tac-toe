@@ -9,13 +9,20 @@ const onNewGame = function (event) {
     .catch(ui.newGameFailure)
 }
 
-const validMove = function (event) {
+const onValidMove = function (event) {
   console.log('clicked!')
   console.log(event.target)
+  console.log(event.target.innerHTML)
   event.preventDefault()
+
+  if (event.target.innerHTML.length === 0) {
+    console.log('No value present')
+  } else {
+    console.log('Invalid move!')
+  }
 }
 
 module.exports = {
   onNewGame,
-  validMove
+  onValidMove
 }
