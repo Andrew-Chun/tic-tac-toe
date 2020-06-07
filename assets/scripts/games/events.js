@@ -20,14 +20,14 @@ const onValidMove = function (event) {
       .then(ui.updateGameSuccess)
       .catch()
   } else {
-    $('#game-message').text('Invalid move!').removeClass().addClass('failure')
+    return $('#game-message').text('Invalid move!').removeClass().addClass('failure')
   }
 
   if (store.currentPlayer === 'x') {
-    $('#game-message').text("Player X's turn.")
+    $('#game-message').text("Player X's turn.").removeClass().addClass('success')
     store.currentPlayer = 'o'
   } else {
-    $('#game-message').text("Player O's turn.")
+    $('#game-message').text("Player O's turn.").removeClass().addClass('success')
     store.currentPlayer = 'x'
   }
 }
