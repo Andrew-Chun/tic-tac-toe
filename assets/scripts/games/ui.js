@@ -5,7 +5,7 @@ const newGameSuccess = function (responseData) {
   // remove X's and O'x from the board
   console.log(responseData)
   $('.container').show()
-  $('#game-message').text("Player X's turn.")
+  $('#game-message').text('New game successfully created!').removeClass().addClass('success')
   $('#0').html('')
   $('#1').html('')
   $('#2').html('')
