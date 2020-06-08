@@ -36,17 +36,17 @@ const updateGameSuccess = function (responseData) {
   }
 
   if (store.currentPlayer === 'x' && !store.game.over) {
-    $('#game-message').text("Player O's turn.").removeClass().addClass('success')
+    $('#game-message').text("Player O's turn").removeClass().addClass('success')
     store.currentPlayer = 'o'
   } else if (store.currentPlayer === 'o' && !store.game.over) {
-    $('#game-message').text("Player X's turn.").removeClass().addClass('success')
+    $('#game-message').text("Player X's turn").removeClass().addClass('success')
     store.currentPlayer = 'x'
   }
 }
 
 const getGamesSuccess = function (responseData) {
   $('#message').hide()
-  $('#game-message').text(`You've won ${responseData.games.length} total games!`).removeClass().addClass('success').show()
+  $('#game-message').text(`You've successfully completed ${responseData.games.length} total games!`).removeClass().addClass('success').show()
 }
 
 module.exports = {
