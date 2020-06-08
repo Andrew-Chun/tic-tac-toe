@@ -17,6 +17,8 @@ const signInSuccess = function (responseData) {
   $('#sign-up').hide()
   $('#changePassword').show()
   $('#sign-out').show()
+  $('#new-game').show()
+  $('#get-games').show()
 }
 
 const signInFailure = function () {
