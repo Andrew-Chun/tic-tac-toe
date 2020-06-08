@@ -15,11 +15,13 @@ const updateGameSuccess = function (responseData) {
   $('#' + store.currentIndex).text(store.currentPlayer)
   store.game = responseData.game
   console.log(isWinner())
+  console.log(store.game.cells.join('').length)
   if (store.game.over) {
     $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`)
-  } else if (store.game.cells.join('').length === 9) {
-    $('game-message').text("It's a Draw!")
+  }
+  if (store.game.cells.join('').length === 9) {
     store.game.over = true
+    $('#game-message').text("It's a Draw!")
   }
   console.log(store)
 }
