@@ -27,6 +27,13 @@ const signInFailure = function () {
 
 const signOutSuccess = function () {
   $('form').trigger('reset')
+  $('#sign-out').hide()
+  $('#changePassword').hide()
+  $('.container').hide()
+  $('#new-game').hide()
+  $('#get-games').hide()
+  $('#sign-up').show()
+  $('#sign-in').show()
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success')
 }
 

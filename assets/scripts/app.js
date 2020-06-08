@@ -6,12 +6,11 @@ const gameEvents = require('./games/events.js')
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-
-  $('#sign-out').hide()
-  $('#changePassword').hide()
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#changePassword').on('submit', authEvents.onChangePassword)
 
+  $('#sign-out').hide()
+  $('#changePassword').hide()
   $('.container').hide()
   $('#new-game').hide()
   $('#get-games').hide()
