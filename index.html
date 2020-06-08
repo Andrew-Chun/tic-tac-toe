@@ -17,7 +17,7 @@
       <main>
         <p id="message"></p>
 
-        <section>
+        <!-- <section>
           <form id="sign-up">
             <label>Sign-Up:</label>
             <input name="credentials[email]" type="text" placeholder="example@gmail.com" required>
@@ -25,19 +25,24 @@
             <input name="credentials[password_confirmation]" type="password" placeholder="Confirm password here" required>
             <button type="submit" class="btn btn-info">Sign Up</button>
           </form>
-        </section>
+        </section> -->
 
-        <!-- <form class="exampleForm">
+        <form class="signUpForm" id="sign-up">
+          <h4>Sign-Up</h4>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form> -->
+          <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password</label>
+            <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
 
         <section>
           <form id="sign-in">
