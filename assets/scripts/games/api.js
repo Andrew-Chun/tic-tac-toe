@@ -25,7 +25,7 @@ const updateGame = function () {
           index: store.currentIndex,
           value: store.currentPlayer
         },
-        over: false
+        over: store.over
       }
     }
   })
