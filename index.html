@@ -67,14 +67,34 @@
 
         <button type="button" class="btn btn-danger" id="sign-out">Sign-Out</button>
 
-        <section>
-          <form id="changePassword">
-            <label>Change Password:</label><br>
-            <input name="passwords[old]" type="password" placeholder="Old password" required>
-            <input name="passwords[new]" type="password" placeholder="New password" required>
-            <button type="submit">Submit</button>
-          </form>
-        </section>
+          <!-- <form class="changePassword" id="changePassword">
+            <h5>Change Password:</h5>
+            <div class="form-group">
+              <input name="passwords[old]" type="password" placeholder="Old password" required>
+              <input name="passwords[new]" type="password" placeholder="New password" required>
+              <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+          </form> -->
+
+
+          <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" id="changePassword">Change Password</a>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  <form class="changePassword" id="changePassword">
+                    <h5>Change Password:</h5>
+                    <div class="form-group">
+                      <input name="passwords[old]" type="password" placeholder="Old password" required>
+                      <input name="passwords[new]" type="password" placeholder="New password" required>
+                      <button type="submit" class="btn btn-info">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
       </main>
 
       <button type="button" class="btn btn-primary" id="new-game">Create New Game</button>

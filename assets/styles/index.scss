@@ -24,7 +24,13 @@ p {
   margin: 0 auto;
 }
 
+#sign-out {
+  float: right;
+}
 
+#changePassword {
+  float: right;
+}
 
 .success {
   color: green;
@@ -45,8 +51,3 @@ p {
   font-size: 100px;
   font-weight: bold;
 }
-
-// form {
-//   background-color: white;
-//   max-width: 60%;
-// }
