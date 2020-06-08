@@ -15,6 +15,7 @@ const signInSuccess = function (responseData) {
   store.user = responseData.user
   $('#sign-in').hide()
   $('#sign-up').hide()
+  $('#toggleChangePassword').show()
   $('#changePassword').show()
   $('#sign-out').show()
   $('#new-game').show()
@@ -28,6 +29,7 @@ const signInFailure = function () {
 const signOutSuccess = function () {
   $('form').trigger('reset')
   $('#sign-out').hide()
+  $('#toggleChangePassword').hide()
   $('#changePassword').hide()
   $('.container').hide()
   $('#new-game').hide()
@@ -45,11 +47,11 @@ const signOutFailure = function () {
 
 const changePasswordSuccess = function () {
   $('form').trigger('reset')
-  $('#message').text(`Password changed successfully!`).removeClass().addClass('success')
+  $('#message').text(`Password changed successfully!`).removeClass().addClass('success').show()
 }
 
 const changePasswordFailure = function () {
-  $('#message').text('Password change failure.').removeClass().addClass('failure')
+  $('#message').text('Password change failure.').removeClass().addClass('failure').show()
 }
 
 module.exports = {
