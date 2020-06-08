@@ -41,7 +41,6 @@ const updateGameSuccess = function (responseData) {
 const getGamesSuccess = function (responseData) {
   $('#game-message').hide()
   $('#game-history').text(`${responseData.games.length} games Won!`).removeClass().addClass('success').show()
-  console.log(responseData)
 }
 
 module.exports = {
