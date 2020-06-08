@@ -13,6 +13,10 @@ const signInSuccess = function (responseData) {
   $('form').trigger('reset')
   $('#message').text(`Signed In successfully!`).removeClass().addClass('success')
   store.user = responseData.user
+  $('#sign-in').hide()
+  $('#sign-up').hide()
+  $('#changePassword').show()
+  $('#sign-out').show()
 }
 
 const signInFailure = function () {
