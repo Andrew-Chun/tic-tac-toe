@@ -3,20 +3,20 @@
 h1 {
   font-size: 100px;
   font-weight: bold;
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 p {
+  font-size: 40px;
   margin: 0 auto;
   text-align: center;
-  font-size: 40px;
 }
 
 .signUpForm {
   border: 3px solid #ccc;
-  width: 50%;
   margin: 0 auto;
+  width: 50%;
 }
 
 .signInForm {
@@ -44,9 +44,10 @@ p {
 .box {
   align-items: center;
   border: 1px solid black;
+  margin: auto;
   color: black;
   display: flex;
-  flex: 100%;
+  flex: flex-basis;
   height: 300px;
   justify-content: center;
   font-size: 100px;
