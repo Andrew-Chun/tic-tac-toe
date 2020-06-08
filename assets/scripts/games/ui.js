@@ -2,10 +2,11 @@ const store = require('./../store.js')
 const isWinner = require('./isWinner.js')
 
 const newGameSuccess = function (responseData) {
-  // remove X's and O'x from the board
   console.log(responseData)
   $('.container').show()
-  $('#game-message').text('New game successfully created!').removeClass().addClass('success')
+  $('#game-history').hide()
+  $('#message').hide()
+  $('#game-message').text('New game successfully created!').removeClass().addClass('success').show()
   $('#0').html('')
   $('#1').html('')
   $('#2').html('')
@@ -20,12 +21,8 @@ const newGameSuccess = function (responseData) {
 }
 
 const updateGameSuccess = function (responseData) {
-  console.log('Valid move!')
-  console.log(responseData)
-  $('#' + store.currentIndex).text(store.currentPlayer)
   store.game = responseData.game
-  console.log(isWinner())
-  console.log(store.game.cells.join('').length)
+  $('#' + store.currentIndex).text(store.currentPlayer).show()
   if (isWinner()) {
     $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`)
   } else if (store.game.cells.join('').length === 9) {
@@ -36,11 +33,8 @@ const updateGameSuccess = function (responseData) {
 }
 
 const getGamesSuccess = function (responseData) {
-  console.log(responseData)
-  console.log(responseData.games)
-  $('#game-history').text(`${responseData.games.length} games played!`)
-  // add length of responseData.games.length to the screen
-  // Total number of games played
+  $('#game-message').hide()
+  $('#game-history').text(`${responseData.games.length} games played!`).removeClass().addClass('success').show()
 }
 
 module.exports = {

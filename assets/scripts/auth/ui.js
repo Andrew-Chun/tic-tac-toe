@@ -11,7 +11,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (responseData) {
   $('form').trigger('reset')
-  $('#message').text(`Signed In successfully!`).removeClass().addClass('success')
+  $('#message').text(`Signed In successfully!`).removeClass().addClass('success').show()
   store.user = responseData.user
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -32,9 +32,11 @@ const signOutSuccess = function () {
   $('.container').hide()
   $('#new-game').hide()
   $('#get-games').hide()
+  $('#game-message').hide()
+  $('#game-history').hide()
   $('#sign-up').show()
   $('#sign-in').show()
-  $('#message').text(`Signed Out successfully!`).removeClass().addClass('success')
+  $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
 }
 
 const signOutFailure = function () {
