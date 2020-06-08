@@ -2,7 +2,6 @@ const store = require('./../store.js')
 const isWinner = require('./isWinner.js')
 
 const newGameSuccess = function (responseData) {
-  console.log(responseData)
   $('.container').show()
   $('#game-history').hide()
   $('#message').hide()
@@ -20,15 +19,10 @@ const newGameSuccess = function (responseData) {
 }
 
 const updateGameSuccess = function (responseData) {
-  console.log(responseData)
-  console.log(store)
   $('#' + store.currentIndex).text(store.currentPlayer).show()
   store.game = responseData.game
 
-  console.log(store.game.over)
   if (isWinner()) {
-    console.log(isWinner())
-    console.log(store.game.over)
     return $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`)
   } else if (store.game.cells.join('').length === 9) {
     store.game.over = true
@@ -42,8 +36,6 @@ const updateGameSuccess = function (responseData) {
     $('#game-message').text("Player X's turn.").removeClass().addClass('success')
     store.currentPlayer = 'x'
   }
-
-  console.log(store)
 }
 
 const getGamesSuccess = function (responseData) {

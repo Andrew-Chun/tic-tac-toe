@@ -1,10 +1,12 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('./../store.js')
-const isWinner = require('./isWinner.js')
 
 const onNewGame = function (event) {
   event.preventDefault()
+
+  store.trackBoard = ['', '', '', '', '', '', '', '', '']
+  store.currentPlayer = 'x'
 
   api.newGame()
     .then(ui.newGameSuccess)
@@ -17,14 +19,13 @@ const onValidMove = function (event) {
   store.currentIndex = event.target.id
 
   store.trackBoard[store.currentIndex] = store.currentPlayer
-  console.log(store.trackBoard)
 
   if (event.target.innerHTML.length === 0 && !store.game.over) {
     api.updateGame()
       .then(ui.updateGameSuccess)
       .catch()
   } else if (!store.game.over) {
-    return $('#game-message').text('Invalid move!').removeClass().addClass('failure')
+    $('#game-message').text('Invalid move!').removeClass().addClass('failure')
   }
 }
 

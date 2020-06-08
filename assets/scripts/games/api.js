@@ -14,7 +14,6 @@ const newGame = function () {
 }
 
 const updateGame = function () {
-  console.log(isWinner() || store.trackBoard.join('').length === 9)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/games/' + store.game._id,
