@@ -18,6 +18,12 @@ const newGameSuccess = function (responseData) {
   store.game = responseData.game
 }
 
+const newGameFailure = function () {
+  $('#message').hide()
+  $('#game-history').hide()
+  $('#game-message').text('Failed to create new game.').removeClass().addClass('failure').show()
+}
+
 const updateGameSuccess = function (responseData) {
   $('#' + store.currentIndex).text(store.currentPlayer).show()
   store.game = responseData.game
@@ -45,6 +51,7 @@ const getGamesSuccess = function (responseData) {
 
 module.exports = {
   newGameSuccess,
+  newGameFailure,
   updateGameSuccess,
   getGamesSuccess
 }

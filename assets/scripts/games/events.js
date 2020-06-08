@@ -10,7 +10,7 @@ const onNewGame = function (event) {
 
   api.newGame()
     .then(ui.newGameSuccess)
-    .catch()
+    .catch(ui.newGameFailure)
 }
 
 const onValidMove = function (event) {
