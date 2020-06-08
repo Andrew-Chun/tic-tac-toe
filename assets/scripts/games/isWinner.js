@@ -1,7 +1,7 @@
 const store = require('./../store.js')
 
 const isWinner = function () {
-  const board = store.game.cells
+  const board = store.trackBoard
 
   if (board[0] === 'x' && board[1] === 'x' && board[2] === 'x') {
     store.game.over = true

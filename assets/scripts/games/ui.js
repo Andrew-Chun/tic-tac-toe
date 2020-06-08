@@ -17,24 +17,38 @@ const newGameSuccess = function (responseData) {
   $('#7').html('')
   $('#8').html('')
   store.game = responseData.game
-  console.log(store)
 }
 
 const updateGameSuccess = function (responseData) {
-  store.game = responseData.game
+  console.log(responseData)
+  console.log(store)
   $('#' + store.currentIndex).text(store.currentPlayer).show()
+  store.game = responseData.game
+
+  console.log(store.game.over)
   if (isWinner()) {
-    $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`)
+    console.log(isWinner())
+    console.log(store.game.over)
+    return $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`)
   } else if (store.game.cells.join('').length === 9) {
     store.game.over = true
-    $('#game-message').text("It's a Draw!")
+    return $('#game-message').text("It's a Draw!")
   }
+
+  if (store.currentPlayer === 'x' && !store.game.over) {
+    $('#game-message').text("Player O's turn.").removeClass().addClass('success')
+    store.currentPlayer = 'o'
+  } else if (store.currentPlayer === 'o' && !store.game.over) {
+    $('#game-message').text("Player X's turn.").removeClass().addClass('success')
+    store.currentPlayer = 'x'
+  }
+
   console.log(store)
 }
 
 const getGamesSuccess = function (responseData) {
   $('#game-message').hide()
-  $('#game-history').text(`${responseData.games.length} games played!`).removeClass().addClass('success').show()
+  $('#game-history').text(`${responseData.games.length} games Won!`).removeClass().addClass('success').show()
   console.log(responseData)
 }
 

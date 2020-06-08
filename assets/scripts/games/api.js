@@ -1,5 +1,6 @@
 const config = require('./../config.js')
 const store = require('./../store.js')
+const isWinner = require('./isWinner.js')
 
 const newGame = function () {
   return $.ajax({
@@ -13,6 +14,7 @@ const newGame = function () {
 }
 
 const updateGame = function () {
+  console.log(isWinner() || store.trackBoard.join('').length === 9)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/games/' + store.game._id,
@@ -25,7 +27,7 @@ const updateGame = function () {
           index: store.currentIndex,
           value: store.currentPlayer
         },
-        over: store.over
+        over: isWinner() || store.trackBoard.join('').length === 9
       }
     }
   })

@@ -1,8 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
 
-* {
-  text-align: center;
-}
 
 .success {
   color: green;
@@ -12,9 +9,9 @@
   color: red;
 }
 
-body {
-  background-color: gray-200;
-}
+// .exampleForm {
+//   width: 500px;
+// }
 
 .box {
   align-items: center;

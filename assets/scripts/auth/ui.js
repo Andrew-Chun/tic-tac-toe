@@ -40,7 +40,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
-  $('#message').text('Sign Out failure.').removeClass().addClass('failure')
+  $('#message').text('Sign Out failure.').removeClass().addClass('failure').show()
 }
 
 const changePasswordSuccess = function () {

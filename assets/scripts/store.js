@@ -1,7 +1,8 @@
 'use strict'
 
 const store = {
-  currentPlayer: 'x'
+  currentPlayer: 'x',
+  trackBoard: ['', '', '', '', '', '', '', '', '']
 }
 
 module.exports = store
