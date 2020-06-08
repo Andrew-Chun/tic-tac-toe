@@ -26,34 +26,46 @@
             <button type="submit" class="btn btn-info">Sign Up</button>
           </form>
         </section> -->
-
-        <form class="signUpForm" id="sign-up">
-          <h4>Sign-Up</h4>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Confirm Password</label>
-            <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-
-        <section>
+        <!-- <section>
           <form id="sign-in">
             <label>Sign-In</label>
             <input name="credentials[email]" type="text" placeholder="example@gmail.com" required>
             <input name="credentials[password]" type="password" placeholder="Enter password here" required>
             <button type="submit" class="btn btn-info">Sign In</button>
           </form>
-        </section>
+        </section> -->
 
-        <button id="sign-out">Sign-Out</button>
+        <form class="signUpForm" id="sign-up">
+          <h4>Sign-Up</h4>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+
+        <form class="signInForm" id="sign-in">
+          <h4>Sign-In</h4>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+
+        <button type="button" class="btn btn-danger" id="sign-out">Sign-Out</button>
 
         <section>
           <form id="changePassword">
