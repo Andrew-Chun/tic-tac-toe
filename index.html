@@ -14,95 +14,61 @@
     <body>
       <h1>Tic-Tac-Toe</h1>
 
-      <main>
-        <p id="message"></p>
+      <p id="message"></p>
+      <p id="game-message"></p>
 
-        <!-- <section>
-          <form id="sign-up">
-            <label>Sign-Up:</label>
-            <input name="credentials[email]" type="text" placeholder="example@gmail.com" required>
-            <input name="credentials[password]" type="password" placeholder="Enter password here" required>
-            <input name="credentials[password_confirmation]" type="password" placeholder="Confirm password here" required>
-            <button type="submit" class="btn btn-info">Sign Up</button>
-          </form>
-        </section> -->
-        <!-- <section>
-          <form id="sign-in">
-            <label>Sign-In</label>
-            <input name="credentials[email]" type="text" placeholder="example@gmail.com" required>
-            <input name="credentials[password]" type="password" placeholder="Enter password here" required>
-            <button type="submit" class="btn btn-info">Sign In</button>
-          </form>
-        </section> -->
+      <form class="signUpForm" id="sign-up">
+        <h4>Sign-Up</h4>
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+      <form class="signInForm" id="sign-in">
+        <h4>Sign-In</h4>
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
 
-        <form class="signUpForm" id="sign-up">
-          <h4>Sign-Up</h4>
-          <div class="form-group">
-            <label>Email address</label>
-            <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label>Confirm Password</label>
-            <input type="password" name="credentials[password_confirmation]" class="form-control" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-
-        <form class="signInForm" id="sign-in">
-          <h4>Sign-In</h4>
-          <div class="form-group">
-            <label>Email address</label>
-            <input type="email" name="credentials[email]" class="form-control" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="credentials[password]" class="form-control" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-info">Submit</button>
-        </form>
-
-        <button type="button" class="btn btn-danger" id="sign-out">Sign-Out</button>
-
-          <!-- <form class="changePassword" id="changePassword">
-            <h5>Change Password:</h5>
-            <div class="form-group">
-              <input name="passwords[old]" type="password" placeholder="Old password" required>
-              <input name="passwords[new]" type="password" placeholder="New password" required>
-              <button type="submit" class="btn btn-info">Submit</button>
-            </div>
-          </form> -->
+      <button type="button" class="btn btn-danger" id="sign-out">Sign-Out</button>
 
 
-          <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" id="toggleChangePassword">Change Password</a>
-          <div class="row">
-            <div class="col">
-              <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <div class="card card-body">
-                  <form class="changePassword" id="changePassword">
-                    <h5>Change Password:</h5>
-                    <div class="form-group">
-                      <input name="passwords[old]" type="password" placeholder="Old password" required>
-                      <input name="passwords[new]" type="password" placeholder="New password" required>
-                      <button type="submit" class="btn btn-info">Submit</button>
-                    </div>
-                  </form>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse" id="toggleChangePassword">Change Password</a>
+      <div class="row">
+        <div class="col">
+          <div class="collapse" id="collapse">
+            <div class="card card-body">
+              <form class="changePassword" id="changePassword">
+                <h5>Change Password:</h5>
+                <div class="form-group">
+                  <input name="passwords[old]" type="password" placeholder="Old password" required>
+                  <input name="passwords[new]" type="password" placeholder="New password" required>
+                  <button type="submit" class="btn btn-info">Submit</button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
-
-      </main>
+        </div>
+      </div>
 
       <button type="button" class="btn btn-primary" id="new-game">Create New Game</button>
       <button type="button" class="btn btn-secondary" id="get-games">Get Games</button>
-
-      <p id="game-message"></p>
-
-      <div id="game-history"></div>
 
       <div class="container" id="game-board">
           <div class="row">
