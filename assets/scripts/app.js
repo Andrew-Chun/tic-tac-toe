@@ -13,6 +13,7 @@ $(() => {
   $('#changePassword').on('submit', authEvents.onChangePassword)
 
   $('.container').hide()
+
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#get-games').on('click', gameEvents.onGetGames)
   $('#0').on('click', gameEvents.onValidMove)

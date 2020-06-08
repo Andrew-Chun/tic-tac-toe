@@ -2,6 +2,7 @@ const store = require('./../store.js')
 const isWinner = require('./isWinner.js')
 
 const newGameSuccess = function (responseData) {
+  // remove X's and O'x from the board
   console.log(responseData)
   $('.container').show()
   $('#game-message').text("Player X's turn.")
@@ -28,9 +29,9 @@ const updateGameSuccess = function (responseData) {
 const getGamesSuccess = function (responseData) {
   console.log(responseData)
   console.log(responseData.games)
-  // responseData.games.forEach(game => {
-  //   $('#game-history').text(`${game}`)
-  // })
+  $('#game-history').text(`${responseData.games.length} games played!`)
+  // add length of responseData.games.length to the screen
+  // Total number of games played
 }
 
 module.exports = {
