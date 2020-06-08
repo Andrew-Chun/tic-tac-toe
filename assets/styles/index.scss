@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+h1 {
+  font-size: 100px;
+  text-align: center;
+}
 
 .success {
   color: green;
@@ -8,10 +12,6 @@
 .failure {
   color: red;
 }
-
-// .exampleForm {
-//   width: 500px;
-// }
 
 .box {
   align-items: center;
@@ -24,3 +24,8 @@
   font-size: 100px;
   font-weight: bold;
 }
+
+// form {
+//   background-color: white;
+//   max-width: 60%;
+// }
