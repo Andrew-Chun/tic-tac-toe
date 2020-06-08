@@ -12,6 +12,7 @@ const newGameSuccess = function (responseData) {
 const updateGameSuccess = function (responseData) {
   console.log('Valid move!')
   console.log(responseData)
+  $('#' + store.currentIndex).text(store.currentPlayer)
   store.game = responseData.game
   console.log(isWinner())
   if (store.game.over) {
@@ -20,7 +21,6 @@ const updateGameSuccess = function (responseData) {
     $('game-message').text("It's a Draw!")
     store.game.over = true
   }
-  $('#' + store.currentIndex).text(store.currentPlayer)
   console.log(store)
 }
 

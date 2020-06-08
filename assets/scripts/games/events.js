@@ -19,14 +19,14 @@ const onValidMove = function (event) {
     api.updateGame()
       .then(ui.updateGameSuccess)
       .catch()
-  } else {
+  } else if (!store.game.over) {
     return $('#game-message').text('Invalid move!').removeClass().addClass('failure')
   }
 
-  if (store.currentPlayer === 'x') {
+  if (store.currentPlayer === 'x' && !store.game.over) {
     $('#game-message').text("Player X's turn.").removeClass().addClass('success')
     store.currentPlayer = 'o'
-  } else {
+  } else if (!store.game.over) {
     $('#game-message').text("Player O's turn.").removeClass().addClass('success')
     store.currentPlayer = 'x'
   }
