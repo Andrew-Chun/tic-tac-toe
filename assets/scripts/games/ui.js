@@ -26,7 +26,16 @@ const updateGameSuccess = function (responseData) {
   console.log(store)
 }
 
+const getGamesSuccess = function (responseData) {
+  console.log(responseData)
+  console.log(responseData.games)
+  // responseData.games.forEach(game => {
+  //   $('#game-history').text(`${game}`)
+  // })
+}
+
 module.exports = {
   newGameSuccess,
-  updateGameSuccess
+  updateGameSuccess,
+  getGamesSuccess
 }

@@ -32,7 +32,16 @@ const onValidMove = function (event) {
   }
 }
 
+const onGetGames = function (event) {
+  event.preventDefault()
+
+  api.getGames()
+    .then(ui.getGamesSuccess)
+    .catch()
+}
+
 module.exports = {
   onNewGame,
-  onValidMove
+  onValidMove,
+  onGetGames
 }
