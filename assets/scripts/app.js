@@ -9,12 +9,12 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#changePassword').on('submit', authEvents.onChangePassword)
 
-  $('#sign-out').hide()
-  $('#toggleChangePassword').hide()
-  $('#changePassword').hide()
+  // $('#sign-out').hide()
+  // $('#toggleChangePassword').hide()
+  // $('#changePassword').hide()
   $('.container').hide()
   $('#new-game').hide()
-  $('#get-games').hide()
+  // $('#get-games').hide()
   $('#dropdownMenu2').hide()
 
   $('#new-game').on('click', gameEvents.onNewGame)
