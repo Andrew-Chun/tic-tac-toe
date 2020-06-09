@@ -42,7 +42,7 @@ const updateGameSuccess = responseData => {
   }
 }
 
-const getGamesSuccess = responseData => {
+const getCompletedGamesSuccess = responseData => {
   $('#message').hide()
   let wins = 0
   let draws = 0
@@ -61,5 +61,5 @@ module.exports = {
   newGameSuccess,
   newGameFailure,
   updateGameSuccess,
-  getGamesSuccess
+  getCompletedGamesSuccess
 }

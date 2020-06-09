@@ -20,7 +20,6 @@ const signInSuccess = responseData => {
 }
 
 const signInFailure = () => {
-  $('form').trigger('reset')
   $('#message').text('Sign in failure.').removeClass().addClass('failure')
 }
 

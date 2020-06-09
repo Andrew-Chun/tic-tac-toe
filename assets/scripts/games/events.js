@@ -28,16 +28,16 @@ const onValidMove = event => {
   }
 }
 
-const onGetGames = event => {
+const onGetCompletedGames = event => {
   event.preventDefault()
 
-  api.getGames()
-    .then(ui.getGamesSuccess)
+  api.getCompletedGames()
+    .then(ui.getCompletedGamesSuccess)
     .catch()
 }
 
 module.exports = {
   onNewGame,
   onValidMove,
-  onGetGames
+  onGetCompletedGames
 }
