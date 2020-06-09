@@ -11,14 +11,14 @@ const signUpFailure = function () {
 
 const signInSuccess = responseData => {
   $('form').trigger('reset')
-  $('#message').text(`Signed In successfully!`).removeClass().addClass('success').show()
-  store.user = responseData.user
+  $('#message').text(`${responseData.user.email} signed in successfully!`).removeClass().addClass('success').show()
   $('.forms').hide()
   $('#toggleChangePassword').show()
   $('#changePassword').show()
   $('#sign-out').show()
   $('#new-game').show()
   $('#get-games').show()
+  store.user = responseData.user
 }
 
 const signInFailure = () => {
