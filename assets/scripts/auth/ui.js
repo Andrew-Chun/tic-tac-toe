@@ -34,7 +34,6 @@ const signOutSuccess = () => {
   $('#new-game').hide()
   $('#get-games').hide()
   $('#game-message').hide()
-  $('#game-history').hide()
   $('.forms').show()
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
 }
