@@ -29,6 +29,7 @@ const signOutSuccess = () => {
   $('#new-game').hide()
   $('#user-actions').hide()
   $('#game-message').hide()
+  $('#incomplete-game-list').hide()
   $('.forms').show()
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
 }
@@ -42,12 +43,14 @@ const changePasswordSuccess = () => {
   $('#message').text(`Password changed successfully!`).removeClass().addClass('success').show()
   $('#collapse').hide()
   $('#game-message').hide()
+  $('#incomplete-game-list').hide()
 }
 
 const changePasswordFailure = () => {
   $('form').trigger('reset')
   $('#message').text('Password change failure.').removeClass().addClass('failure').show()
   $('#game-message').hide()
+  $('#incomplete-game-list').hide()
 }
 
 module.exports = {

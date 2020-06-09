@@ -3,6 +3,7 @@ const isWinner = require('./isWinner.js')
 
 const newGameSuccess = responseData => {
   $('#message').hide()
+  $('#incomplete-game-list').hide()
   $('#game-message').text('New game successfully created!').removeClass().addClass('success').show()
   $('.container').show()
   $('#0').html('')
@@ -66,26 +67,28 @@ const getIncompletedGamesSuccess = responseData => {
     store.trackBoard = game.cells
     if (!isWinner()) {
       const oneGame = (`
-        <div class="container" id="game-board">
-            <div class="row tic-tac-toe-board">
-              <div class="col-4 box-0" id="0">${game.cells[0]}</div>
-              <div class="col-4 box-1" id="1">${game.cells[1]}</div>
-              <div class="col-4 box-2" id="2">${game.cells[2]}</div>
-              <div class="col-4 box-3" id="3">${game.cells[3]}</div>
-              <div class="col-4 box-4" id="4">${game.cells[4]}</div>
-              <div class="col-4 box-5" id="5">${game.cells[5]}</div>
-              <div class="col-4 box-6" id="6">${game.cells[6]}</div>
-              <div class="col-4 box-7" id="7">${game.cells[7]}</div>
-              <div class="col-4 box-8" id="8">${game.cells[8]}</div>
-            </div>
-        </div>
+        <li class="list-group-item">
+          <div class="container" id="game-board">
+              <div class="row tic-tac-toe-board">
+                <div class="col-4 box-0" id="0">${game.cells[0]}</div>
+                <div class="col-4 box-1" id="1">${game.cells[1]}</div>
+                <div class="col-4 box-2" id="2">${game.cells[2]}</div>
+                <div class="col-4 box-3" id="3">${game.cells[3]}</div>
+                <div class="col-4 box-4" id="4">${game.cells[4]}</div>
+                <div class="col-4 box-5" id="5">${game.cells[5]}</div>
+                <div class="col-4 box-6" id="6">${game.cells[6]}</div>
+                <div class="col-4 box-7" id="7">${game.cells[7]}</div>
+                <div class="col-4 box-8" id="8">${game.cells[8]}</div>
+              </div>
+          </div>
+        </li>
         <br>
       `)
       incompleteGamesHtml += oneGame
     }
   })
   console.log(incompleteGamesHtml)
-  $('#incomplete-game-list').html(incompleteGamesHtml)
+  $('#incomplete-game-list').html(incompleteGamesHtml).show()
 }
 
 module.exports = {
