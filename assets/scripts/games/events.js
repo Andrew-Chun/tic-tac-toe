@@ -2,7 +2,7 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const store = require('./../store.js')
 
-const onNewGame = function (event) {
+const onNewGame = event => {
   event.preventDefault()
 
   store.trackBoard = ['', '', '', '', '', '', '', '', '']
@@ -13,7 +13,7 @@ const onNewGame = function (event) {
     .catch(ui.newGameFailure)
 }
 
-const onValidMove = function (event) {
+const onValidMove = event => {
   event.preventDefault()
 
   if (event.target.innerHTML.length === 0 && !store.game.over) {
@@ -28,7 +28,7 @@ const onValidMove = function (event) {
   }
 }
 
-const onGetGames = function (event) {
+const onGetGames = event => {
   event.preventDefault()
 
   api.getGames()

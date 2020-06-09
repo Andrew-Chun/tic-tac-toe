@@ -1,7 +1,7 @@
 const store = require('./../store.js')
 const isWinner = require('./isWinner.js')
 
-const newGameSuccess = function (responseData) {
+const newGameSuccess = responseData => {
   $('#message').hide()
   $('#game-message').text('New game successfully created!').removeClass().addClass('success').show()
   $('.container').show()
@@ -17,12 +17,12 @@ const newGameSuccess = function (responseData) {
   store.game = responseData.game
 }
 
-const newGameFailure = function () {
+const newGameFailure = () => {
   $('#message').hide()
   $('#game-message').text('Failed to create new game.').removeClass().addClass('failure').show()
 }
 
-const updateGameSuccess = function (responseData) {
+const updateGameSuccess = responseData => {
   $('#' + store.currentIndex).text(store.currentPlayer).show()
   store.game = responseData.game
 
@@ -42,7 +42,7 @@ const updateGameSuccess = function (responseData) {
   }
 }
 
-const getGamesSuccess = function (responseData) {
+const getGamesSuccess = responseData => {
   $('#message').hide()
   let wins = 0
   let draws = 0

@@ -1,6 +1,6 @@
 const store = require('./../store.js')
 
-const signUpSuccess = function (responseData) {
+const signUpSuccess = responseData => {
   $('form').trigger('reset')
   $('#message').text(`Signed up successfully!`).removeClass().addClass('success')
 }
@@ -9,7 +9,7 @@ const signUpFailure = function () {
   $('#message').text('Sign up failure.').removeClass().addClass('failure')
 }
 
-const signInSuccess = function (responseData) {
+const signInSuccess = responseData => {
   $('form').trigger('reset')
   $('#message').text(`Signed In successfully!`).removeClass().addClass('success').show()
   store.user = responseData.user
@@ -21,11 +21,11 @@ const signInSuccess = function (responseData) {
   $('#get-games').show()
 }
 
-const signInFailure = function () {
+const signInFailure = () => {
   $('#message').text('Sign in failure.').removeClass().addClass('failure')
 }
 
-const signOutSuccess = function () {
+const signOutSuccess = () => {
   $('form').trigger('reset')
   $('#sign-out').hide()
   $('#toggleChangePassword').hide()
@@ -39,16 +39,16 @@ const signOutSuccess = function () {
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
 }
 
-const signOutFailure = function () {
+const signOutFailure = () => {
   $('#message').text('Sign Out failure.').removeClass().addClass('failure').show()
 }
 
-const changePasswordSuccess = function () {
+const changePasswordSuccess = () => {
   $('form').trigger('reset')
   $('#message').text(`Password changed successfully!`).removeClass().addClass('success').show()
 }
 
-const changePasswordFailure = function () {
+const changePasswordFailure = () => {
   $('#message').text('Password change failure.').removeClass().addClass('failure').show()
 }
 

@@ -2,7 +2,7 @@ const config = require('./../config.js')
 const store = require('./../store.js')
 const isWinner = require('./isWinner.js')
 
-const newGame = function () {
+const newGame = () => {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/games',
@@ -13,7 +13,7 @@ const newGame = function () {
   })
 }
 
-const updateGame = function () {
+const updateGame = () => {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/games/' + store.game._id,
@@ -32,7 +32,7 @@ const updateGame = function () {
   })
 }
 
-const getGames = function () {
+const getGames = () => {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/games?over=true',
