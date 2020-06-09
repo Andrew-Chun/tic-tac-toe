@@ -62,14 +62,11 @@
         </div>
     </div>
 
-      <!-- <button type="button" class="btn btn-danger sign-out" id="sign-out">Sign-Out</button> -->
-
-      <!-- <a class="btn btn-info toggle-change-password" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse" id="toggleChangePassword">Change Password</a> -->
       <div class="row">
         <div class="col">
           <div class="collapse" id="collapse">
             <div class="card card-body">
-              <form class="changePassword" id="changePassword">
+              <form class="change-pw" id="change-pw">
                 <h5>Change Password:</h5>
                 <div class="form-group">
                   <input name="passwords[old]" type="password" placeholder="Old password" required>
@@ -83,15 +80,12 @@
       </div>
 
       <button type="button" class="btn btn-success" id="new-game">Create New Game</button>
-      <!-- <button type="button" class="btn btn-secondary" id="get-games">Show Game Stats</button> -->
 
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="user-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          User Email Here
-        </button>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="user-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
         <div class="dropdown-menu" aria-labelledby="user-actions">
           <button class="dropdown-item get-games" type="button" id="get-games">Show Game Stats</button>
-          <a class="btn dropdown-item btn-info toggle-change-password" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse" id="toggleChangePassword">Change Password</a>
+          <a class="btn dropdown-item toggle-change-pw" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse" id="toggle-change-pw">Change Password</a>
           <button class="dropdown-item sign-out" type="button" id="sign-out">Log Out</button>
         </div>
       </div>
