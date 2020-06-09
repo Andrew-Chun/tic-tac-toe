@@ -29,10 +29,10 @@ const updateGameSuccess = function (responseData) {
   store.game = responseData.game
 
   if (isWinner()) {
-    return $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`)
+    return $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`).removeClass().addClass('success')
   } else if (store.game.cells.join('').length === 9) {
     store.game.over = true
-    return $('#game-message').text("It's a Draw!")
+    return $('#game-message').text("It's a Draw!").removeClass().addClass('success')
   }
 
   if (store.currentPlayer === 'x' && !store.game.over) {
@@ -57,7 +57,6 @@ const getGamesSuccess = function (responseData) {
     }
   })
   $('#game-message').text(`You've won ${wins} games with ${draws} draws`).removeClass().addClass('success').show()
-  // $('#game-message').text(`You've successfully completed ${responseData.games.length} total games!`).removeClass().addClass('success').show()
 }
 
 module.exports = {

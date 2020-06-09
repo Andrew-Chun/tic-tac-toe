@@ -16,11 +16,9 @@ const onNewGame = function (event) {
 const onValidMove = function (event) {
   event.preventDefault()
 
-  store.currentIndex = event.target.id
-
-  store.trackBoard[store.currentIndex] = store.currentPlayer
-
   if (event.target.innerHTML.length === 0 && !store.game.over) {
+    store.currentIndex = event.target.id
+    store.trackBoard[store.currentIndex] = store.currentPlayer
     api.updateGame()
       .then(ui.updateGameSuccess)
       .catch()
