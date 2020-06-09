@@ -18,6 +18,7 @@ const signInSuccess = responseData => {
   $('#sign-out').show()
   $('#new-game').show()
   $('#get-games').show()
+  $('.dropdown-toggle').text(responseData.user.email)
   $('#dropdownMenu2').show()
   store.user = responseData.user
 }
