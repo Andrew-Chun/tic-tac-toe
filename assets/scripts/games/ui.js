@@ -2,10 +2,9 @@ const store = require('./../store.js')
 const isWinner = require('./isWinner.js')
 
 const newGameSuccess = function (responseData) {
-  $('.container').show()
-  $('#game-history').hide()
   $('#message').hide()
   $('#game-message').text('New game successfully created!').removeClass().addClass('success').show()
+  $('.container').show()
   $('#0').html('')
   $('#1').html('')
   $('#2').html('')
@@ -20,7 +19,6 @@ const newGameSuccess = function (responseData) {
 
 const newGameFailure = function () {
   $('#message').hide()
-  $('#game-history').hide()
   $('#game-message').text('Failed to create new game.').removeClass().addClass('failure').show()
 }
 

@@ -19,6 +19,7 @@ const onValidMove = function (event) {
   if (event.target.innerHTML.length === 0 && !store.game.over) {
     store.currentIndex = event.target.id
     store.trackBoard[store.currentIndex] = store.currentPlayer
+
     api.updateGame()
       .then(ui.updateGameSuccess)
       .catch()
