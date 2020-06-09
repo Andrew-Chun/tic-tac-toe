@@ -13,13 +13,9 @@ const signInSuccess = responseData => {
   $('form').trigger('reset')
   $('#message').text(`${responseData.user.email} signed in successfully!`).removeClass().addClass('success').show()
   $('.forms').hide()
-  // $('#toggleChangePassword').show()
-  // $('#changePassword').show()
-  // $('#sign-out').show()
   $('#new-game').show()
-  // $('#get-games').show()
   $('.dropdown-toggle').text(responseData.user.email)
-  $('#dropdownMenu2').show()
+  $('#user-actions').show()
   store.user = responseData.user
 }
 
@@ -29,15 +25,14 @@ const signInFailure = () => {
 
 const signOutSuccess = () => {
   $('form').trigger('reset')
-  // $('#sign-out').hide()
-  // $('#toggleChangePassword').hide()
-  // $('#changePassword').hide()
+
   $('.container').hide()
   $('#new-game').hide()
-  // $('#get-games').hide()
-  $('#dropdownMenu2').hide()
+  $('#user-actions').hide()
   $('#game-message').hide()
+
   $('.forms').show()
+
   $('#message').text(`Signed Out successfully!`).removeClass().addClass('success').show()
 }
 

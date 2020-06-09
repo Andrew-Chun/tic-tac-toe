@@ -9,13 +9,9 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#changePassword').on('submit', authEvents.onChangePassword)
 
-  // $('#sign-out').hide()
-  // $('#toggleChangePassword').hide()
-  // $('#changePassword').hide()
   $('.container').hide()
   $('#new-game').hide()
-  // $('#get-games').hide()
-  $('#dropdownMenu2').hide()
+  $('#user-actions').hide()
 
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#get-games').on('click', gameEvents.onGetGames)
