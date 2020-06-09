@@ -46,7 +46,18 @@ const updateGameSuccess = function (responseData) {
 
 const getGamesSuccess = function (responseData) {
   $('#message').hide()
-  $('#game-message').text(`You've successfully completed ${responseData.games.length} total games!`).removeClass().addClass('success').show()
+  let wins = 0
+  let draws = 0
+  responseData.games.forEach(game => {
+    store.trackBoard = game.cells
+    if (isWinner()) {
+      wins++
+    } else {
+      draws++
+    }
+  })
+  $('#game-message').text(`You've won ${wins} games with ${draws} draws`).removeClass().addClass('success').show()
+  // $('#game-message').text(`You've successfully completed ${responseData.games.length} total games!`).removeClass().addClass('success').show()
 }
 
 module.exports = {
