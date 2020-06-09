@@ -18,6 +18,7 @@ const signInSuccess = responseData => {
   $('#sign-out').show()
   $('#new-game').show()
   $('#get-games').show()
+  $('#dropdownMenu2').show()
   store.user = responseData.user
 }
 
@@ -45,10 +46,13 @@ const signOutFailure = () => {
 const changePasswordSuccess = () => {
   $('form').trigger('reset')
   $('#message').text(`Password changed successfully!`).removeClass().addClass('success').show()
+  $('#collapse').hide()
+  $('#game-message').hide()
 }
 
 const changePasswordFailure = () => {
   $('#message').text('Password change failure.').removeClass().addClass('failure').show()
+  $('#game-message').hide()
 }
 
 module.exports = {

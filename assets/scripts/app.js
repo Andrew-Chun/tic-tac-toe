@@ -15,9 +15,11 @@ $(() => {
   $('.container').hide()
   $('#new-game').hide()
   $('#get-games').hide()
+  $('#dropdownMenu2').hide()
 
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#get-games').on('click', gameEvents.onGetGames)
+
   $('#0').on('click', gameEvents.onValidMove)
   $('#1').on('click', gameEvents.onValidMove)
   $('#2').on('click', gameEvents.onValidMove)
