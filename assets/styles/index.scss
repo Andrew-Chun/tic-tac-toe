@@ -7,23 +7,33 @@ h1 {
   text-align: center;
 }
 
-p {
+#message#game-message {
   font-size: 40px;
   margin: 0 auto;
   text-align: center;
+  float: right;
 }
 
-.signUpForm {
+.forms {
   border: 3px solid #ccc;
   margin: 0 auto;
   width: 50%;
+
+  &.signUpForm {
+    order: 1;
+  }
+
+  &p {
+    text-align: right;
+  }
+  &.signInForm {
+    border: 3px solid #ccc;
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
-.signInForm {
-  border: 3px solid #ccc;
-  width: 50%;
-  margin: 0 auto;
-}
+
 
 #sign-out {
   float: right;
