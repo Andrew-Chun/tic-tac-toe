@@ -1,8 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
-body {
-  background-color: #D3D3D3;
-}
+// body {
+//   background-color: #D3D3D3;
+// }
 
 h1 {
   font-size: 100px;
@@ -13,12 +13,11 @@ h1 {
 
 #message {
   font-size: 25px;
-  margin: 0;
   text-align: center;
 }
 
 #game-message {
-  font-size: 40px;
+  font-size: 25px;
   margin: 0 auto;
   text-align: center;
 }
@@ -48,27 +47,27 @@ h1 {
   }
 }
 
-#sign-out {
+.sign-out {
   float: right;
 }
 
-#toggleChangePassword {
+.toggle-change-password {
   float: right;
 }
 
 .success {
-  color: green;
+  color: #009900;
 }
 
 .failure {
-  color: red;
+  color: #ff0000;
 }
 
 .box {
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #000000;
   margin: auto;
-  color: black;
+  color: #000000;
   display: flex;
   flex: flex-basis;
   height: 300px;
