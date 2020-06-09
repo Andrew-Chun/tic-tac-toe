@@ -42,18 +42,19 @@ const getCompletedGames = () => {
   })
 }
 
-// const getGames = () => {
-//   return $.ajax({
-//     method: 'GET',
-//     url: config.apiUrl + '/games?over=true',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const getIncompletedGames = () => {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/games',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   newGame,
   updateGame,
-  getCompletedGames
+  getCompletedGames,
+  getIncompletedGames
 }

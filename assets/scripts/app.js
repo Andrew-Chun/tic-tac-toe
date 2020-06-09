@@ -14,7 +14,8 @@ $(() => {
   $('#user-actions').hide()
 
   $('#new-game').on('click', gameEvents.onNewGame)
-  $('#get-games').on('click', gameEvents.onGetCompletedGames)
+  $('#get-completed-games').on('click', gameEvents.onGetCompletedGames)
+  $('#get-incompleted-games').on('click', gameEvents.onGetIncompletedGames)
 
   $('#0').on('click', gameEvents.onValidMove)
   $('#1').on('click', gameEvents.onValidMove)

@@ -36,8 +36,17 @@ const onGetCompletedGames = event => {
     .catch()
 }
 
+const onGetIncompletedGames = event => {
+  event.preventDefault()
+
+  api.getIncompletedGames()
+    .then(ui.getIncompletedGamesSuccess)
+    .catch()
+}
+
 module.exports = {
   onNewGame,
   onValidMove,
-  onGetCompletedGames
+  onGetCompletedGames,
+  onGetIncompletedGames
 }
