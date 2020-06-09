@@ -1,8 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
-// body {
-//   background-color: #D3D3D3;
-// }
+body {
+  background-color: #D3D3D3;
+}
 
 h1 {
   font-size: 100px;
@@ -47,15 +47,15 @@ h1 {
   }
 }
 
-#user {
-  float: right;
-}
-
 .sign-out {
   float: right;
 }
 
 .toggle-change-password {
+  float: right;
+}
+
+#get-games {
   float: right;
 }
 
