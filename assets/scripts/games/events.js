@@ -46,20 +46,12 @@ const onGetIncompleteGames = event => {
 
 const onPickIncompleteGame = event => {
   event.preventDefault()
-  // Get game id, store it, and add cells to the page
-  console.log(event)
-  console.log(event.currentTarget)
-  console.log(event.currentTarget.getAttribute('id'))
-  const gameId = event.currentTarget.getAttribute('id')
-  console.log(event.currentTarget.getAttribute('data-cells'))
 
-  console.log(event.currentTarget.childNodes[1])
-  $('#incomplete-game-list').hide()
+  const gameId = event.currentTarget.getAttribute('id')
 
   api.getGame(gameId)
     .then(ui.getGameSuccess)
     .catch(ui.getGameFailure)
-  // $('#game-board').html(`${event.currentTarget.childNodes[1]}`).show()
 }
 
 module.exports = {

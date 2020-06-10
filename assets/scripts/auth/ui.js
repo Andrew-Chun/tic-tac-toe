@@ -26,7 +26,6 @@ const signInFailure = () => {
 }
 
 const signOutSuccess = () => {
-  $('form').trigger('reset')
   $('.container').hide()
   $('#new-game').hide()
   $('#user-actions').hide()

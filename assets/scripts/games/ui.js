@@ -125,6 +125,7 @@ const getGameSuccess = (responseData) => {
   }
   $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()}'s turn`).removeClass().addClass('success').show()
   $('#message').hide()
+  $('#incomplete-game-list').hide()
   $('.container').show()
 }
 
