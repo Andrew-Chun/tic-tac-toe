@@ -15,6 +15,8 @@ const newGameSuccess = responseData => {
   $('#6').html('')
   $('#7').html('')
   $('#8').html('')
+  store.currentPlayer = 'x'
+  store.trackBoard = ['', '', '', '', '', '', '', '', '']
   store.game = responseData.game
 }
 
@@ -28,6 +30,7 @@ const updateGameSuccess = responseData => {
   store.game = responseData.game
 
   if (isWinner()) {
+    store.game.over = true
     return $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()} Wins!`).removeClass().addClass('success')
   } else if (store.game.cells.join('').length === 9) {
     store.game.over = true
@@ -93,7 +96,6 @@ const getIncompleteGamesSuccess = responseData => {
           </div>
         </li>
       `)
-
       incompleteGamesHtml += oneGame
     }
   })
@@ -119,9 +121,8 @@ const getGameSuccess = (responseData) => {
       numO++
     }
   }
-  if (numX > numO) {
-    store.currentPlayer = 'o'
-  }
+  numX > numO ? store.currentPlayer = 'o' : store.currentPlayer = 'x'
+
   $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()}'s turn`).removeClass().addClass('success').show()
   $('#message').hide()
   $('#incomplete-game-list').hide()
