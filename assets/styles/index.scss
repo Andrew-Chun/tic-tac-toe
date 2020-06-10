@@ -82,7 +82,7 @@ h1 {
   text-align: center;
 
   &:hover {
-    background-color: #ccffff;
+    background-color: #00ffff;
   }
 }
 
@@ -128,4 +128,8 @@ ul {
   overflow: hidden;
   overflow-y: scroll;
   width: 635px;
+}
+
+li:hover {
+  background-color: #00FFFF;
 }

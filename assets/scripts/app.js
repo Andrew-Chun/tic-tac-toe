@@ -26,4 +26,6 @@ $(() => {
   $('#6').on('click', gameEvents.onValidMove)
   $('#7').on('click', gameEvents.onValidMove)
   $('#8').on('click', gameEvents.onValidMove)
+
+  $('ul').on('click', 'li', gameEvents.onPickIncompleteGame)
 })

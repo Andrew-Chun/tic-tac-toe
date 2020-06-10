@@ -62,13 +62,12 @@ const getIncompletedGamesSuccess = responseData => {
   $('#game-message').text('Scroll here to view your unfinish games:').removeClass().addClass('success').show()
   $('#message').hide()
   $('.container').hide()
-  console.log(responseData)
   let incompleteGamesHtml = ''
   responseData.games.forEach(game => {
     store.trackBoard = game.cells
     if (!isWinner()) {
       const oneGame = (`
-        <li class="list-group-item">
+        <li class="list-group-item" id="incomplete-game">
           <div class="container" id="game-board">
               <div class="row tic-tac-toe-board">
                 <div class="col-4 box-0" id="0">${game.cells[0]}</div>
@@ -87,7 +86,6 @@ const getIncompletedGamesSuccess = responseData => {
       incompleteGamesHtml += oneGame
     }
   })
-  console.log(incompleteGamesHtml)
   $('#incomplete-game-list').html(incompleteGamesHtml).show()
 }
 

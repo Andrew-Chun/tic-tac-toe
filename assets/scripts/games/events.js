@@ -44,9 +44,16 @@ const onGetIncompletedGames = event => {
     .catch()
 }
 
+const onPickIncompleteGame = event => {
+  event.preventDefault()
+  console.log(event.target)
+  console.log('Clicked!')
+}
+
 module.exports = {
   onNewGame,
   onValidMove,
   onGetCompletedGames,
-  onGetIncompletedGames
+  onGetIncompletedGames,
+  onPickIncompleteGame
 }
