@@ -59,8 +59,9 @@ const getCompletedGamesSuccess = responseData => {
 }
 
 const getIncompletedGamesSuccess = responseData => {
-  $('#game-message').text('Here are your unfinished games:').removeClass().addClass('success').show()
+  $('#game-message').text('Scroll here to view your unfinish games:').removeClass().addClass('success').show()
   $('#message').hide()
+  $('.container').hide()
   console.log(responseData)
   let incompleteGamesHtml = ''
   responseData.games.forEach(game => {
@@ -82,7 +83,6 @@ const getIncompletedGamesSuccess = responseData => {
               </div>
           </div>
         </li>
-        <br>
       `)
       incompleteGamesHtml += oneGame
     }

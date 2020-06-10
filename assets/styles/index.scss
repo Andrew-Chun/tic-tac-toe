@@ -68,6 +68,10 @@ h1 {
   width: 600px;
 }
 
+.tic-tac-toe-board {
+  height: 600px;
+}
+
 .col-4 {
   border: 1px solid #000000;
   color: #000000;
@@ -119,9 +123,9 @@ h1 {
 }
 
 ul {
-  float: right;
+  height: 600px;
+  margin: 0 auto;
   overflow: hidden;
   overflow-y: scroll;
-  width: 33%;
-  height: 800px;
+  width: 635px;
 }
