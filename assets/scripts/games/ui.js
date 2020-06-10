@@ -43,6 +43,11 @@ const updateGameSuccess = responseData => {
   }
 }
 
+const updateGameFailure = () => {
+  $('#message').hide()
+  $('#game-message').text('Invalid move!').removeClass().addClass('failure')
+}
+
 const getCompletedGamesSuccess = responseData => {
   $('#message').hide()
   let wins = 0
@@ -56,6 +61,11 @@ const getCompletedGamesSuccess = responseData => {
     }
   })
   $('#game-message').text(`You've won ${wins} games with ${draws} draws`).removeClass().addClass('success').show()
+}
+
+const getCompletedGamesFailure = () => {
+  $('#message').hide()
+  $('#game-message').text('Unable to get player stats.').removeClass().addClass('failure').show()
 }
 
 const getIncompleteGamesSuccess = responseData => {
@@ -91,6 +101,11 @@ const getIncompleteGamesSuccess = responseData => {
   $('#incomplete-game-list').html(incompleteGamesHtml).show()
 }
 
+const getIncompleteGamesFailure = () => {
+  $('#message').hide()
+  $('#game-message').text('Failed to retrieve incomplete games.').removeClass().addClass('failure').show()
+}
+
 const getGameSuccess = (responseData) => {
   store.game = responseData.game[0]
   store.trackBoard = responseData.game[0].cells
@@ -113,11 +128,20 @@ const getGameSuccess = (responseData) => {
   $('.container').show()
 }
 
+const getGameFailure = () => {
+  $('#message').hide()
+  $('#game-message').text(`Unable to retrieve game.`).removeClass().addClass('failure').show()
+}
+
 module.exports = {
   newGameSuccess,
   newGameFailure,
   updateGameSuccess,
+  updateGameFailure,
   getCompletedGamesSuccess,
+  getCompletedGamesFailure,
   getIncompleteGamesSuccess,
-  getGameSuccess
+  getIncompleteGamesFailure,
+  getGameSuccess,
+  getGameFailure
 }

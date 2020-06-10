@@ -22,7 +22,7 @@ const onValidMove = event => {
 
     api.updateGame()
       .then(ui.updateGameSuccess)
-      .catch()
+      .catch(ui.updateGameFailure)
   } else if (!store.game.over) {
     $('#game-message').text('Invalid move!').removeClass().addClass('failure')
   }
@@ -33,7 +33,7 @@ const onGetCompletedGames = event => {
 
   api.getCompletedGames()
     .then(ui.getCompletedGamesSuccess)
-    .catch()
+    .catch(ui.getCompletedGamesFailure)
 }
 
 const onGetIncompleteGames = event => {
@@ -41,7 +41,7 @@ const onGetIncompleteGames = event => {
 
   api.getIncompleteGames()
     .then(ui.getIncompleteGamesSuccess)
-    .catch()
+    .catch(ui.getIncompleteGamesFailure)
 }
 
 const onPickIncompleteGame = event => {
@@ -54,12 +54,11 @@ const onPickIncompleteGame = event => {
   console.log(event.currentTarget.getAttribute('data-cells'))
 
   console.log(event.currentTarget.childNodes[1])
-  // $('#')
   $('#incomplete-game-list').hide()
 
   api.getGame(gameId)
     .then(ui.getGameSuccess)
-    .catch()
+    .catch(ui.getGameFailure)
   // $('#game-board').html(`${event.currentTarget.childNodes[1]}`).show()
 }
 
