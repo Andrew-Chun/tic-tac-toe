@@ -11,9 +11,9 @@ const onSignUp = event => {
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 
-  api.signIn(data)
-    .then(ui.signInSuccess)
-    .catch(ui.signInSuccess)
+  // api.signIn(data)
+  //   .then(ui.signInSuccess)
+  //   .catch(ui.signInFailure)
 }
 
 const onSignIn = event => {
