@@ -62,6 +62,20 @@
         </div>
       </div>
 
+
+      <button type="button" class="btn btn-success create-new-game" id="new-game">Create New Game</button>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="user-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+        <div class="dropdown-menu" aria-labelledby="user-actions">
+          <button class="dropdown-item get-completed-games" type="button" id="get-completed-games">Cumulative Game Stats</button>
+          <button class="dropdown-item get-incompleted-games" type="button" id="get-incompleted-games">View Incomplete Games</button>
+          <a class="btn dropdown-item toggle-change-pw" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse" id="toggle-change-pw">Change Password</a>
+          <button class="dropdown-item sign-out" type="button" id="sign-out">Log Out</button>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col">
           <div class="collapse" id="collapse">
@@ -78,20 +92,6 @@
           </div>
         </div>
       </div>
-
-      <button type="button" class="btn btn-success create-new-game" id="new-game">Create New Game</button>
-
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="user-actions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-
-        <div class="dropdown-menu" aria-labelledby="user-actions">
-          <button class="dropdown-item get-completed-games" type="button" id="get-completed-games">Cumulative Game Stats</button>
-          <button class="dropdown-item get-incompleted-games" type="button" id="get-incompleted-games">View Incomplete Games</button>
-          <a class="btn dropdown-item toggle-change-pw" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse" id="toggle-change-pw">Change Password</a>
-          <button class="dropdown-item sign-out" type="button" id="sign-out">Log Out</button>
-        </div>
-      </div>
-
 
       <div class="container" id="game-board">
           <div class="row tic-tac-toe-board">
