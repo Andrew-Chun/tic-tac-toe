@@ -75,8 +75,7 @@ const getIncompleteGamesSuccess = responseData => {
   let incompleteGamesHtml = ''
   responseData.games.forEach(game => {
     store.trackBoard = game.cells
-    if (!isWinner()) {
-      console.log(game)
+    if (!isWinner() && store.trackBoard.join('').length < 9) {
       const oneGame = (`
         <li class="list-group-item" id="${game._id}" data-cells='[${game.cells}]'>
           <div class="container" id="game-board2">

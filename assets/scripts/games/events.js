@@ -5,9 +5,6 @@ const store = require('./../store.js')
 const onNewGame = event => {
   event.preventDefault()
 
-  store.trackBoard = ['', '', '', '', '', '', '', '', '']
-  store.currentPlayer = 'x'
-
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
