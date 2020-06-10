@@ -1,7 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
+$body-color: #d3d3d3
+$gray-border-color: #789
+$green-color: #090
+$red-color: #f00
+$black-color: #000
+$turquois-color: #0ff
+
 body {
-  background-color: #D3D3D3;
+  background-color: $body-color;
 }
 
 h1 {
@@ -11,56 +18,51 @@ h1 {
   text-align: center;
 }
 
-#message {
+p {
   font-size: 25px;
   text-align: center;
 }
 
-#game-message {
-  font-size: 25px;
-  margin: 0 auto;
-  text-align: center;
-}
 
 .forms {
-  border: 3px solid #778899;
+  border: 3px solid $gray-border-color;
   border-radius: 10px;
   margin: 75px auto;
   width: 50%;
 
-  &.signUpForm {
-    border: 3px solid #778899;
+  &.sign-up-form {
+    border: 3px solid $gray-border-color;
     margin: 0 auto;
     width: 50%;
   }
 
-  >.signIn {
+  >.sign-in {
+    border-top: 1px solid $gray-border-color;
     font-size: 20px;
-    border-top: 1px solid #778899;
     text-align: right;
   }
 
-  &.signInForm {
-    border: 3px solid #778899;
+  &.sign-in-form {
+    border: 3px solid $gray-border-color;
     margin: 0 auto;
     width: 50%;
   }
 }
 
-#new-game {
-  float: left;
-}
+// .create-new-game {
+//   float: left;
+// }
 
-.dropdown {
-  float: left;
-}
+// .dropdown {
+//   float: left;
+// }
 
 .success {
-  color: #009900;
+  color: $green-color;
 }
 
 .failure {
-  color: #ff0000;
+  color: $red-color;
 }
 
 .container {
@@ -73,8 +75,8 @@ h1 {
 }
 
 .col-4 {
-  border: 1px solid #000000;
-  color: #000000;
+  border: 1px solid $black-color;
+  color: $black-color;
   font-size: 100px;
   font-weight: bold;
   height: 200px;
@@ -82,7 +84,7 @@ h1 {
   text-align: center;
 
   &:hover {
-    background-color: #00ffff;
+    background-color: $turquois-color;
   }
 }
 
@@ -124,12 +126,14 @@ h1 {
 
 ul {
   height: 600px;
-  margin: 0 auto;
+  margin: auto;
   overflow: hidden;
   overflow-y: scroll;
   width: 635px;
-}
 
-li:hover {
-  background-color: #00FFFF;
+  li {
+    :hover {
+      background-color: $turquois-color;
+    }
+  }
 }
