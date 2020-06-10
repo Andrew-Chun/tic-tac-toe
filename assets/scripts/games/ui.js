@@ -92,10 +92,25 @@ const getIncompleteGamesSuccess = responseData => {
 }
 
 const getGameSuccess = (responseData) => {
-  console.log(responseData)
-  store.game = responseData.game
-  console.log(store)
-  console.log('Get Game Success!')
+  store.game = responseData.game[0]
+  store.trackBoard = responseData.game[0].cells
+
+  let numX = 0
+  let numO = 0
+  for (let i = 0; i < store.trackBoard.length; i++) {
+    $('#' + i).html(store.trackBoard[i])
+    if (store.trackBoard[i] === 'x') {
+      numX++
+    } else if (store.trackBoard[i] === 'o') {
+      numO++
+    }
+  }
+  if (numX > numO) {
+    store.currentPlayer = 'o'
+  }
+  $('#game-message').text(`Player ${store.currentPlayer.toUpperCase()}'s turn`).removeClass().addClass('success').show()
+  $('#message').hide()
+  $('.container').show()
 }
 
 module.exports = {
