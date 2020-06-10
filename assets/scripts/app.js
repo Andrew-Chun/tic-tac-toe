@@ -15,7 +15,7 @@ $(() => {
 
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#get-completed-games').on('click', gameEvents.onGetCompletedGames)
-  $('#get-incompleted-games').on('click', gameEvents.onGetIncompletedGames)
+  $('#get-incompleted-games').on('click', gameEvents.onGetIncompleteGames)
 
   $('#0').on('click', gameEvents.onValidMove)
   $('#1').on('click', gameEvents.onValidMove)

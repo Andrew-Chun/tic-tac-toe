@@ -58,18 +58,19 @@ const getCompletedGamesSuccess = responseData => {
   $('#game-message').text(`You've won ${wins} games with ${draws} draws`).removeClass().addClass('success').show()
 }
 
-const getIncompletedGamesSuccess = responseData => {
-  $('#game-message').text('Scroll here to view your unfinish games:').removeClass().addClass('success').show()
+const getIncompleteGamesSuccess = responseData => {
+  $('#game-message').text('Scroll here to view your unfinished games:').removeClass().addClass('success').show()
   $('#message').hide()
   $('.container').hide()
   let incompleteGamesHtml = ''
   responseData.games.forEach(game => {
     store.trackBoard = game.cells
     if (!isWinner()) {
+      console.log(game)
       const oneGame = (`
-        <li class="list-group-item" id="incomplete-game">
-          <div class="container" id="game-board">
-              <div class="row tic-tac-toe-board">
+        <li class="list-group-item" id="${game._id}" data-cells='[${game.cells}]'>
+          <div class="container" id="game-board2">
+              <div class="row tic-tac-toe-board2">
                 <div class="col-4 box-0" id="0">${game.cells[0]}</div>
                 <div class="col-4 box-1" id="1">${game.cells[1]}</div>
                 <div class="col-4 box-2" id="2">${game.cells[2]}</div>
@@ -83,10 +84,18 @@ const getIncompletedGamesSuccess = responseData => {
           </div>
         </li>
       `)
+
       incompleteGamesHtml += oneGame
     }
   })
   $('#incomplete-game-list').html(incompleteGamesHtml).show()
+}
+
+const getGameSuccess = (responseData) => {
+  console.log(responseData)
+  store.game = responseData.game
+  console.log(store)
+  console.log('Get Game Success!')
 }
 
 module.exports = {
@@ -94,5 +103,6 @@ module.exports = {
   newGameFailure,
   updateGameSuccess,
   getCompletedGamesSuccess,
-  getIncompletedGamesSuccess
+  getIncompleteGamesSuccess,
+  getGameSuccess
 }

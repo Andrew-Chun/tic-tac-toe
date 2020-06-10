@@ -36,24 +36,37 @@ const onGetCompletedGames = event => {
     .catch()
 }
 
-const onGetIncompletedGames = event => {
+const onGetIncompleteGames = event => {
   event.preventDefault()
 
-  api.getIncompletedGames()
-    .then(ui.getIncompletedGamesSuccess)
+  api.getIncompleteGames()
+    .then(ui.getIncompleteGamesSuccess)
     .catch()
 }
 
 const onPickIncompleteGame = event => {
   event.preventDefault()
-  console.log(event.target)
-  console.log('Clicked!')
+  // Get game id, store it, and add cells to the page
+  console.log(event)
+  console.log(event.currentTarget)
+  console.log(event.currentTarget.getAttribute('id'))
+  const gameId = event.currentTarget.getAttribute('id')
+  console.log(event.currentTarget.getAttribute('data-cells'))
+
+  console.log(event.currentTarget.childNodes[1])
+  // $('#')
+  $('#incomplete-game-list').hide()
+
+  api.getGame(gameId)
+    .then(ui.getGameSuccess)
+    .catch()
+  // $('#game-board').html(`${event.currentTarget.childNodes[1]}`).show()
 }
 
 module.exports = {
   onNewGame,
   onValidMove,
   onGetCompletedGames,
-  onGetIncompletedGames,
+  onGetIncompleteGames,
   onPickIncompleteGame
 }
