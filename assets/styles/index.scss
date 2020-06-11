@@ -7,6 +7,7 @@ $board-color: #000;
 $board-piece-color: #000;
 $failure-color: #f00;
 $hover-color: #0ff;
+$ul-color: #000;
 
 body {
   background-color: $light-gray-color;
@@ -50,9 +51,9 @@ p {
   }
 }
 
-// .create-new-game {
-//   float: left;
-// }
+.create-new-game {
+  float: left;
+}
 
 .dropdown {
   float: right;
@@ -125,14 +126,16 @@ p {
   border-right: transparent;
 }
 
-ul {
-  height: 600px;
+.list-group {
+  border: 3px solid $ul-color;
+  border-radius: 10px;
+  height: 700px;
   margin: auto;
   overflow: hidden;
   overflow-y: scroll;
-  width: 635px;
+  width: 650px;
 
-  li {
+  .list-group-item {
     :hover {
       background-color: $hover-color;
     }

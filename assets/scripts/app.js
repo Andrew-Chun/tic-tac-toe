@@ -12,6 +12,7 @@ $(() => {
   $('.container').hide()
   $('#new-game').hide()
   $('#user-actions').hide()
+  $('#incomplete-game-list').hide()
 
   $('#new-game').on('click', gameEvents.onNewGame)
   $('#get-completed-games').on('click', gameEvents.onGetCompletedGames)
