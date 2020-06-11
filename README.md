@@ -21,20 +21,20 @@
 Before communicating with the API, I tested curl-scripts to ensure that GET/POST/PATCH/DELETE requests are valid.
 I chose to split up the project into two separate folders/sections handling user authentication and game actions.
 
-  app.js - initially loads all the jQuery event listeners ('click', 'submit') and hide()
-  store.js - temporarily stores user/game data along with a preset currentPlayer string and trackBoard array
+  - app.js - initially loads all the jQuery event listeners ('click', 'submit') and hide()
+  - store.js - temporarily stores user/game data along with a preset currentPlayer string and trackBoard array
 
-  /auth/api.js - sends AJAX requests to GA's backend API (POST, PATCH, DELETE)
-  /auth/events.js - callback functions to handle user sign-up/sign-in/change-password/sign-out
-  /auth/ui.js - handles AJAX reponses and DOM manipulation
+  - /auth/api.js - sends AJAX requests to GA's backend API (POST, PATCH, DELETE)
+  - /auth/events.js - callback functions to handle user sign-up/sign-in/change-password/sign-out
+  - /auth/ui.js - handles AJAX reponses and DOM manipulation
 
-  /games/api.js - sends AJAX requests to GA's backend API (GET, POST, PATCH)
-  /games/events.js - callback functions handle game actions (create new game, onValidMove, gameStats, getIncomplateGames)
-  /games/ui.js - handles AJAX reponses and DOM manipulation (shows incompleteGames)
-  /games/isWinner.js - determines if there is a winner
+  - /games/api.js - sends AJAX requests to GA's backend API (GET, POST, PATCH)
+  - /games/events.js - callback functions handle game actions (create new game, onValidMove, gameStats, getIncomplateGames)
+  - /games/ui.js - handles AJAX reponses and DOM manipulation (shows incompleteGames)
+  - /games/isWinner.js - determines if there is a winner
 
-  index.html - contains initial board, forms, buttons, lists, etc.
-  index.scss - contains CSS/Bootstrap/Sass for styling
+  - index.html - contains initial board, forms, buttons, lists, etc.
+  - index.scss - contains CSS/Bootstrap/Sass for styling
 
 ### User stories
 
