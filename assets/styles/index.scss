@@ -25,7 +25,6 @@ p {
   text-align: center;
 }
 
-
 .forms {
   border: 3px solid $form-boder-color;
   border-radius: 10px;
@@ -51,7 +50,7 @@ p {
   }
 }
 
-.create-new-game {
+.create-new-game-button {
   float: left;
 }
 
@@ -77,7 +76,8 @@ p {
 }
 
 .col-4 {
-  border: 2px solid $board-color;
+  border-bottom: 2px solid $board-color;
+  border-right: 2px solid $board-color;
   color: $board-piece-color;
   font-size: 100px;
   font-weight: bold;
@@ -88,42 +88,14 @@ p {
   &:hover {
     background-color: $hover-color;
   }
-}
 
-.box-0 {
-  border-left: transparent;
-  border-top: transparent;
-}
+  &:nth-child(3n) {
+    border-right: 0;
+  }
 
-.box-1 {
-  border-top: transparent;
-}
-
-.box-2 {
-  border-right: transparent;
-  border-top: transparent;
-}
-
-.box-3 {
-  border-left: transparent;
-}
-
-.box-5 {
-  border-right: transparent;
-}
-
-.box-6 {
-  border-bottom: transparent;
-  border-left: transparent;
-}
-
-.box-7 {
-  border-bottom: transparent;
-}
-
-.box-8 {
-  border-bottom: transparent;
-  border-right: transparent;
+  &:nth-last-child(-1n + 3) {
+    border-bottom: 0;
+  }
 }
 
 .list-group {
@@ -165,7 +137,8 @@ p {
   }
 
   .col-4 {
-    border: 2px solid $board-color;
+    border-bottom: 2px solid $board-color;
+    border-right: 2px solid $board-color;
     color: $board-piece-color;
     font-size: 50px;
     font-weight: bold;
@@ -176,42 +149,14 @@ p {
     &:hover {
       background-color: $hover-color;
     }
-  }
 
-  .box-0 {
-    border-left: transparent;
-    border-top: transparent;
-  }
+    &:nth-child(3n) {
+      border-right: 0;
+    }
 
-  .box-1 {
-    border-top: transparent;
-  }
-
-  .box-2 {
-    border-right: transparent;
-    border-top: transparent;
-  }
-
-  .box-3 {
-    border-left: transparent;
-  }
-
-  .box-5 {
-    border-right: transparent;
-  }
-
-  .box-6 {
-    border-bottom: transparent;
-    border-left: transparent;
-  }
-
-  .box-7 {
-    border-bottom: transparent;
-  }
-
-  .box-8 {
-    border-bottom: transparent;
-    border-right: transparent;
+    &:nth-last-child(-1n + 3) {
+      border-bottom: 0;
+    }
   }
 
   .list-group {
