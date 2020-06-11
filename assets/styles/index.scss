@@ -77,7 +77,7 @@ p {
 }
 
 .col-4 {
-  border: 1px solid $board-color;
+  border: 2px solid $board-color;
   color: $board-piece-color;
   font-size: 100px;
   font-weight: bold;
@@ -138,6 +138,95 @@ p {
   .list-group-item {
     :hover {
       background-color: $hover-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 75px;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 10px;
+    width: 300px;
+  }
+
+  .tic-tac-toe-board {
+    height: 300px;
+  }
+
+  .col-4 {
+    border: 2px solid $board-color;
+    color: $board-piece-color;
+    font-size: 50px;
+    font-weight: bold;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+
+  .box-0 {
+    border-left: transparent;
+    border-top: transparent;
+  }
+
+  .box-1 {
+    border-top: transparent;
+  }
+
+  .box-2 {
+    border-right: transparent;
+    border-top: transparent;
+  }
+
+  .box-3 {
+    border-left: transparent;
+  }
+
+  .box-5 {
+    border-right: transparent;
+  }
+
+  .box-6 {
+    border-bottom: transparent;
+    border-left: transparent;
+  }
+
+  .box-7 {
+    border-bottom: transparent;
+  }
+
+  .box-8 {
+    border-bottom: transparent;
+    border-right: transparent;
+  }
+
+  .list-group {
+    border: 3px solid $ul-color;
+    border-radius: 10px;
+    height: 350px;
+    margin: 50px auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 350px;
+
+    .list-group-item {
+      :hover {
+        background-color: $hover-color;
+      }
     }
   }
 }

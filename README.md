@@ -6,7 +6,7 @@
 - HTML/CSS
 - JavaScript
 - jQuery
-- Bootstrap
+- Bootstrap/Sass
 
 ## Planning and Development Process
 - Day 1: Authentication - Sign Up, Sign In, Change Password, Sign Out
@@ -23,7 +23,7 @@
 1) As a user, I can sign up for an account to access the features game
 2) As a user, I can sign in, change password, or sign out of my account
 3) As a user, I can play multiple games to satisfy my gameplay desire
-4) As a user, I can view the stats to show number of wins and losses
+4) As a user, I can view the stats to display outcomes of previous games
 5) As a user, I can finish incomplete games later
 
 ### Tic Tac Toe Wireframe

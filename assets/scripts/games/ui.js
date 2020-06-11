@@ -72,7 +72,7 @@ const getCompletedGamesFailure = () => {
 }
 
 const getIncompleteGamesSuccess = responseData => {
-  $('#game-message').text('Scroll below to choose your unfinished games:').removeClass().addClass('success').show()
+  $('#game-message').text('Scroll below to choose your unfinished game:').removeClass().addClass('success').show()
   $('#message').hide()
   $('.container').hide()
   let incompleteGamesHtml = ''
