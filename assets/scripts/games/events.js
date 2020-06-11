@@ -3,16 +3,12 @@ const ui = require('./ui.js')
 const store = require('./../store.js')
 
 const onNewGame = event => {
-  event.preventDefault()
-
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
 }
 
 const onValidMove = event => {
-  event.preventDefault()
-
   if (event.target.innerHTML.length === 0 && !store.game.over) {
     store.currentIndex = event.target.id
     store.trackBoard[store.currentIndex] = store.currentPlayer
@@ -26,24 +22,18 @@ const onValidMove = event => {
 }
 
 const onGetCompletedGames = event => {
-  event.preventDefault()
-
   api.getCompletedGames()
     .then(ui.getCompletedGamesSuccess)
     .catch(ui.getCompletedGamesFailure)
 }
 
 const onGetIncompleteGames = event => {
-  event.preventDefault()
-
   api.getIncompleteGames()
     .then(ui.getIncompleteGamesSuccess)
     .catch(ui.getIncompleteGamesFailure)
 }
 
 const onPickIncompleteGame = event => {
-  event.preventDefault()
-
   const gameId = event.currentTarget.getAttribute('id')
 
   api.getGame(gameId)
