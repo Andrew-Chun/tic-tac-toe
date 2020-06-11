@@ -8,7 +8,7 @@
 - jQuery
 - Bootstrap/Sass
 
-## Planning and Development Process
+## Planning
 - Day 1: Authentication - Sign Up, Sign In, Change Password, Sign Out
 - Day 2: API Rd 1 (CREATE) - New Game, Track board in JS
 - Day 2: Game UI Rd 1 - Design a simple game board, add click handler for when a space on game board is clicked
@@ -18,6 +18,7 @@
 - Day 4: API Round 3 (INDEX) - Get games (player stats, allow )
 - Day 5: Final touches - README, troubleshoot/debug, style
 
+## Development Process
 Before communicating with the API, I tested curl-scripts to ensure that GET/POST/PATCH/DELETE requests are valid.
 I chose to split up the project into two separate folders/sections handling user authentication and game actions.
 
