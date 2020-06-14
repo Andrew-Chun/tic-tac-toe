@@ -37,7 +37,10 @@ I chose to split up the project into two separate folders/sections handling user
   - **index.html** - contains initial board, forms, buttons, lists, etc.
   - **index.scss** - contains CSS/Bootstrap/Sass for styling
 
-### User stories
+## Unsolved Problems to be fixed in future iterations
+When user logs out, I would fix the sign-in collapse button to be reset.
+
+## User stories
 
 1) As a user, I can sign up for an account to access the features game
 2) As a user, I can sign in, change my password, or sign out of my account
@@ -45,5 +48,5 @@ I chose to split up the project into two separate folders/sections handling user
 4) As a user, I can view the stats to display outcomes of previous games
 5) As a user, I can view and select incomplete games to finish later
 
-### Tic Tac Toe Wireframe
+## Tic Tac Toe Wireframe
 ![Imgur](https://i.imgur.com/dejXrYX.jpg "TicTacToe Wireframe")
