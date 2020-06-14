@@ -38,6 +38,7 @@ I chose to split up the project into two separate folders/sections handling user
   - **index.scss** - contains CSS/Bootstrap/Sass for styling
 
 ## Unsolved Problems to be fixed in future iterations
+One of the winning moves does not stop the game.
 When user logs out, I would fix the sign-in collapse button to be reset.
 
 ## User stories
