@@ -4,7 +4,7 @@ const isWinner = require('./isWinner.js')
 const newGameSuccess = responseData => {
   $('#message').hide()
   $('#incomplete-game-list').hide()
-  $('#game-message').text('New game successfully created!').removeClass().addClass('success').show()
+  $('#game-message').text('Game successfully created!').removeClass().addClass('success').show()
   $('.container').show()
   $('#0').html('')
   $('#1').html('')
